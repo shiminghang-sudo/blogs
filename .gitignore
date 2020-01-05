@@ -1,2 +1,6 @@
 .idea
 blogs/__pycache__
+myblog/__pycache__/
+myblog/migrations/__pycache__/
+
+
