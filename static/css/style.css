@@ -7,28 +7,38 @@ body {
 	background: #F6F6F6;
 }
 
+/*.header {*/
+/*	position: fixed;*/
+/*	top: 0;*/
+/*	z-index: 999;               !*设置此标签的优先级，999说明此标签覆盖其他标签，优先显示*!*/
+/*	margin-bottom: 20px;*/
+/*	width: 100%;*/
+/*	!*background: #222;*!*/
+/*	opacity: .95;				!*本元素的不透明度是 0.95。请注意，文本和背景色都受到不透明级别的影响*!*/
+/*	-moz-opacity: .9;			!*透明度90%*!*/
+/*	border: 1px solid black;*/
+/*}*/
+
 .header {
-	position: fixed;
-	top: 0;
-	z-index: 999;               /*设置此标签的优先级，999说明此标签覆盖其他标签，优先显示*/
 	margin-bottom: 20px;
+	height: 60px;
 	width: 100%;
-	/*background: #222;*/
-	opacity: .95;				/*本元素的不透明度是 0.95。请注意，文本和背景色都受到不透明级别的影响*/
-	-moz-opacity: .9			/*透明度90%*/
+	border: 1px solid #555555;
 }
 
 .container {
-	border: 1px solid red;
+	/*border: 1px solid red;*/
 	margin: 0 auto;
 	width: 1200px;
-	height: 60px;
+	/*height: 60px;*/
 }
 
-.container:after {						/*清除浮动的方式*/
+.navbar {
+	/*border: 3px solid yellow;*/
+}
+
+.clear {
 	clear: both;
-	display: block;
-	content: "";
 }
 
 li {
@@ -37,6 +47,8 @@ li {
 
 .navbar>ul {
 	float: right;
+	border: 1px solid blue;
+	z-index: 100;
 }
 
 .navbar>ul>li{
@@ -67,7 +79,8 @@ li {
 
 .nav .drop-down:hover .nav_child {
 	display: block;
-
+	position: relative;
+	z-index: 1;
 }
 
 .nav_child>li>a{
@@ -79,12 +92,38 @@ li {
 	color: #555555;
 	background: #FFFFFF;
 	display: block;
+
 }
 
-/*.nav_child {*/
-/*	background: #FFFFFF;*/
-/*}*/
+section {
+	z-index: 222;
+}
 
+.banner-navber {
+	width: 1200px;
+	height: 320px;
+	margin: 0 auto;
+}
+
+.swiper-li {
+	width: 1200px;
+	height: 320px;
+	position: absolute;
+	/*display: none;*/
+	opacity: 0;
+}
+
+.swiper-li:nth-child(1) {
+	/*display: block;*/
+	opacity: 1;
+}
+
+.swiper-li img {
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	position: relative;
+}
 
 
 
